@@ -1,0 +1,24 @@
+<h2>Weather of : {{ city | uppercase }}</h2>
+
+<table>
+  <tr>
+    <td>
+
+      <img src="http://openweathermap.org/img/wn/{{ weather?.icon }}@2x.png" alt="">
+
+    </td>
+    <td>
+      <div>
+        Weather: {{ weather?.main }} {{ weather?.description }}
+      </div>
+      <br>
+      <div>
+        Temperature: {{ weather?.temperature }}
+      </div>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<button type="button" [routerLink]="['/']">Back</button>
